@@ -1,0 +1,35 @@
+.kanban-board {
+  width: 100%;
+}
+
+.example-info {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.example-info h2 {
+  color: #1f2937;
+  margin-bottom: 12px;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
+
+.example-info p {
+  color: #6b7280;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.kanban-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+
+@media (max-width: 1024px) {
+  .kanban-container {
+    grid-template-columns: 1fr;
+  }
+}
+

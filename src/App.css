@@ -1,0 +1,85 @@
+.app {
+  width: 100%;
+}
+
+.app-header {
+  text-align: center;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.app-header h1 {
+  font-size: 3rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.app-header p {
+  font-size: 1.05rem;
+  opacity: 0.95;
+  font-weight: 400;
+}
+
+.example-nav {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.example-nav button {
+  padding: 14px 28px;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #6366f1;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.example-nav button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  background: white;
+}
+
+.example-nav button.active {
+  background: #6366f1;
+  color: white;
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.35);
+}
+
+.example-container {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  min-height: 500px;
+  backdrop-filter: blur(10px);
+}
+
+@media (max-width: 768px) {
+  .app-header h1 {
+    font-size: 2rem;
+  }
+
+  .example-nav {
+    flex-direction: column;
+  }
+
+  .example-nav button {
+    width: 100%;
+  }
+
+  .example-container {
+    padding: 20px;
+  }
+}
+

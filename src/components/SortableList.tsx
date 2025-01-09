@@ -7,7 +7,7 @@ import {
 import { CSS } from '@dnd-kit/utilities'
 import { useSortableList } from '../hooks/useSortableList'
 import type { Task } from '../types/sortableList'
-import { PRIORITY_COLORS } from '../constants/sortableList'
+import { PRIORITY_COLORS, PRIORITY_LABELS } from '../constants/sortableList'
 import './SortableList.css'
 
 function SortableList() {
@@ -80,11 +80,7 @@ function SortableItem({ task }: SortableItemProps) {
             className="task-priority"
             style={{ backgroundColor: PRIORITY_COLORS[task.priority] }}
           >
-            {task.priority === 'high'
-              ? 'High'
-              : task.priority === 'medium'
-              ? 'Mid'
-              : 'Low'}
+            {PRIORITY_LABELS[task.priority]}
           </span>
         </div>
         <p className="task-description">{task.description}</p>

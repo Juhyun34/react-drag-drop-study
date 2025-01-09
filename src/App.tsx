@@ -20,18 +20,21 @@ function App() {
         <button
           className={activeExample === 'basic' ? 'active' : ''}
           onClick={() => setActiveExample('basic')}
+          aria-label="HTML5 API 예제 보기"
         >
           HTML5 API
         </button>
         <button
           className={activeExample === 'sortable' ? 'active' : ''}
           onClick={() => setActiveExample('sortable')}
+          aria-label="Sortable List 예제 보기"
         >
           Sortable List
         </button>
         <button
           className={activeExample === 'kanban' ? 'active' : ''}
           onClick={() => setActiveExample('kanban')}
+          aria-label="Kanban Board 예제 보기"
         >
           Kanban Board
         </button>

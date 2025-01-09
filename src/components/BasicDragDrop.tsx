@@ -65,6 +65,7 @@ function BasicDragDrop() {
                   <button
                     className="remove-btn"
                     onClick={() => handleRemove(item.id)}
+                    aria-label={`${item.text} 제거`}
                   >
                     ✕
                   </button>
@@ -75,7 +76,7 @@ function BasicDragDrop() {
         </div>
       </div>
 
-      <button className="reset-btn" onClick={handleReset}>
+      <button className="reset-btn" onClick={handleReset} aria-label="초기화">
         Reset
       </button>
     </div>

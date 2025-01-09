@@ -25,9 +25,13 @@ export function useBasicDragDrop() {
     e.preventDefault()
     const itemData = e.dataTransfer.getData('application/json')
     if (itemData) {
-      const item: Item = JSON.parse(itemData)
-      setDroppedItems((prev) => [...prev, item])
-      setItems((prev) => prev.filter((i) => i.id !== item.id))
+      try {
+        const item: Item = JSON.parse(itemData)
+        setDroppedItems((prev) => [...prev, item])
+        setItems((prev) => prev.filter((i) => i.id !== item.id))
+      } catch (error) {
+        console.error('Failed to parse dropped item:', error)
+      }
     }
   }
 
